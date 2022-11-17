@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 2</title>
+</head>
+<body>
+
+    <script>
+       //Variable booleana per controla l'entrada a l'usuari a la "web"
+        let deixaEntrar = false;
+
+        //varaible per definir el nom de personatge
+        let personatge = "joan melsion";
+        
+        //Controlem lentrada de l'usuari
+        while(deixaEntrar == false){
+            //Demanem que escrigui el nom d'un personatge
+            
+            //Passem les ades introduides de l'usuari a minusculesa
+            nom = nom.toLocaleLowerCase();
+            
+            //Si el nom és igual al el personatge guardat et deixarà entrar a la "web";
+            if(nom == personatge){
+                deixaEntrar = true;
+            } else {
+                alert("ERROR, inteta-ho de nou.");
+            }
+        }
+
+
+        document.write("Enhorabona, pots accedir a la pàgina web!")
+    </script>
+    
+</body>
+</html>

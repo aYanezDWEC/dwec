@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 4</title>
+</head>
+<body>
+    <script>
+
+        //Array de les lletres
+        let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 
+                      'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+        //Variable per controlar el nombre
+        let boolNombre = false;
+        let h = "h";
+
+        do{
+            //Demanem un nombre a l'usuari i comprovem que està entre el 0 i el 99999999
+            while (boolNombre == false){
+                let nombreNIF = prompt("Escriu un nombre entre el 0 i el 99999999");
+               
+                if(nombreNIF >= 0 && nombreNIF <= 99999999){
+                    boolNombre = true;
+                } else{
+                    boolNombre = false;
+                }
+
+                //Anem a calcular la lletra que li correspon
+                let modulNIF = nombreNIF % 23;
+                //document.write(modulNIF);
+
+                nombreNIF = nombreNIF + letras[modulNIF];
+                if (boolNombre == true){
+                    alert("El NIF amb la lletra serà: " + nombreNIF +  " Si vols introduïr un altre nombre pitja acceptar");
+                } else {
+                    alert("Nombre incorrecte.")
+                }
+                
+            }
+        } while ( h == "h");
+
+        //Intente crear un do while per a que el bucle sigui infinit i te demani un nombre tota la estona,
+        //pero el do while només me funciona una vega, de fet ni siquiera me imprimeix el document.write del
+        //final, també està provat amb un while, comel que hi ha, però tampoc funciona
+        document.write("HOLA");
+            
+        
+            
+
+        
+
+
+
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

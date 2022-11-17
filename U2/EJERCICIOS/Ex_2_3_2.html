@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 3.2</title>
+</head>
+<body>
+
+    <script>
+        //Variable per fer la cadena.
+        let cadena = prompt("Escriu una frase.")
+
+            //Varaibles per contar el tipus de llatres 
+            let comptadorMayuscules = 0;
+            let comptadorMinuscules = 0;
+
+            //Passem el string a una array
+            let arrayCadena = cadena.split('');
+            document.write(arrayCadena);
+            
+            //Ara comprovem si la array te un mayiscules o no
+            for(let i=0; i <= arrayCadena.length; i++){
+                if(arrayCadena[i].toUpperCase === "H"){
+                    comptadorMayuscules = comptadorMayuscules + 1;
+                } else{
+                    comptadorMinuscules++;
+                }
+
+            }
+
+
+            
+            document.write(comptadorMayuscules);
+        
+
+       
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

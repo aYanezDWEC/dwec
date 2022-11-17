@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici 3</title>
+</head>
+<body>
+    
+    <script>
+
+        //Creem una array per guardar 
+        let arrABC = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 
+                      'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+        for (let i = 1; i<=arrABC.length * 2; i++){
+            if(i <= 26){
+                document.write(i + " - " + arrABC[i-1] + "<br>");
+            } else if( i > 26){
+                document.write(i + " - " + arrABC[0] + arrABC[i-27] + "<br>");
+            }
+            
+
+        }
+
+    </script>
+
+</body>
+</html>

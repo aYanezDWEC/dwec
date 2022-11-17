@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Exercici 2
+    </title>
+</head>
+<body>
+
+  
+    
+    <script>
+        /*
+        //NOMBRE
+        let nombre = 6308;
+        document.write(nombre + "<br>");
+
+        let nombreGirat;
+        let arrGirada;
+
+        
+        //Anem a fer l constant de KAPREKAR
+        while (nombre != 6174){
+
+            // 1er Cambiem la variable tipus nombre, a array
+            let arr = Array.from(String(nombre));
+            document.write(arr + "<br>");
+            document.write("HOLA")
+
+            // 2n girem el nombre
+            arrGirada[0] = arr[3];
+            arrGirada[1] = arr[2];
+            arrGirada[2] = arr[1];
+            arrGirada[3] = arr[0];
+            
+            document.write("HOLA1");
+            document.write(arrGirada);
+
+        }
+
+
+
+
+
+
+      
+         
+
+        //Ordenem el nombre de mayor a menor 
+        const selectionSort = arr => {
+        for ( let j = 0; j < arr.length; ++j ) {
+            let i = iMin = j;
+            for ( ++i; i < arr.length; ++i ) {
+            ( arr[ i ] > arr[ iMin ] ) && ( iMin = i );
+            }
+            [ arr[ j ], arr[ iMin ] ] = [ arr[ iMin ], arr[ j ] ];
+        }
+
+        return arr;
+
+        }
+
+      
+        let result = selectionSort(arr);
+
+        document.write(result);
+        
+
+        /*
+        let nombre = 6308;
+
+         while (nombre != 6174){
+
+         }
+         */
+
+         const promptText = "Elije qualquier numero de 4 digitos que esté formado por almenos dos digitos diferentes.";
+
+         let numero = prompt(promptText);
+
+         console.log("Nímero inicial: " + numero);
+
+         function karperkar(numero, pasos){
+
+            //Creamos una array, para guardarla numero por numero
+            let arrayNumero = new Array();
+            
+            //Variables para guardar los números ordenados
+            let mayor, menor;
+
+            //Añadir el número a la array
+            for(i=0; i<numero.length; i++){
+                arrayNumero[i] = numero[i];
+            }
+
+
+            //ordenar el array
+            arrayNumero.sort();
+
+            //Guardar el número en menor, como número
+            menor = uneDigitos(arrayNumero);
+
+            arrayNumero = daleLaVuelta(arrayNumero);
+
+            mayor = uneDigitos(arrayNumero);
+
+            //Convertir menor y mayor en números
+            mayor = parseInt(mayor);
+            menor = parseInt(menor);
+
+            numero = mayor - menor;
+
+
+            //Mostramos el resultado
+            console.log(mayor + " - " + menor + "= " + numero);
+
+            //Evitar bucles infinitos
+            if(pasos >7 ){
+                console.log("Numeor de pasos superado, algo no está bien...");
+                return;
+            }
+
+            if (numero === 6174){
+                console.log("Paos realizados: " + pasos);
+                return;
+            }
+
+            return karperkar(numero, pasos);
+
+
+            
+
+         }
+
+         //Devuelve una cadena formada con los elementos de la array
+         function uneDigitos(arrayNumero){
+            let cadena = "";
+
+            for(i = 0; i < arrayNumero.length; i++){
+                cadena += arrayNumero[i];
+            }
+
+            return cadena;
+         }
+
+         // Funcion para girar los digitos de una array
+         function daleLaVuelta(arrayNumero){
+
+            let arrayAux = new Array(arrayNumero.length);
+
+            for(j = 0; j<arrayNumero.length; j++){
+                arrayAux[arrayNumero.length - 1 - j] = arrayNumero[j];
+            }
+
+            return arrayAux;
+         }
+
+         
+    
+    
+    
+        
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+
