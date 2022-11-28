@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">	
+      
+   </head>
+   <body>
+      <div id="cuadrado"></div>
+      <script>
+
+
+        document.write("Escriu una lletra: ")
+        document.addEventListener('keydown', capturarLletra);
+        
+        function capturarLletra(e){
+            if(e.keyCode >= '65' || e.keyCode <= "90"){
+               document.write("Ha triat la lletra: " + e.key.toUpperCase());
+            }
+         }
+        
+        
+       
+
+     </script>
+   </body>
+</html>
