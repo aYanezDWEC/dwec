@@ -5,18 +5,67 @@
       
    </head>
    <body>
-      <div id="cuadrado"></div>
+
+      <html>
+         <body>
+         
+         <div id ="DivContenedor">
+            <h1>Texto inicial</h1>
+         </div>
+
+         <div id="text">
+            <table id="tabla" border="1px">
+               <td>1</td>
+            </table>
+
+            <button id="boton">VER CONTENIDO</button>
+         </div>
+
+         <script>
+            let tabla = document.getElementById("tabla");
+            let boton = document.getElementById("boton");
+
+            tabla.hidden = true;
+            
+
+            function aco(){
+               tabla.hidden = false;
+               boton.disabled = true;
+            }
+
+            //evento 
+            boton.addEventListener('click', aco, false);
+
+            
+
+         </script>
+         
+         
+         <script>
+             var element = document.getElementById("DivContenedor");
+             element.innerHTML = "Esto es lo que aparece directamenet.";
+         </script>
+         
+         </body>
+         </html>
+
+
       <script>
 
 
-        document.write("Escriu una lletra: ")
-        document.addEventListener('keydown', capturarLletra);
-        
-        function capturarLletra(e){
-            if(e.keyCode >= '65' || e.keyCode <= "90"){
-               document.write("Ha triat la lletra: " + e.key.toUpperCase());
-            }
-         }
+
+
+//Con esto se puede cojer la palabra de un cadena de texto qualquiera 
+var cadena = "pcaslkhadpapel kjhfaa lagartoddasdo ajhfda dkjdfgj";
+var palabra = "papel";
+
+var index = cadena.indexOf(palabra);
+
+if(index >= 0) {
+    console.log("la palabra existe dentro de la cadena y se encuentra en la posición " + index);
+} else {
+    console.log("la palabra no existe dentro de la cadena");
+}
         
         
        
